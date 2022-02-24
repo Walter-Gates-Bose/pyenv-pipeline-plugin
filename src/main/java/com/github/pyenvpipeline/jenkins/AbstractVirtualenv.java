@@ -17,7 +17,6 @@ public abstract class AbstractVirtualenv implements Serializable {
     String getRelativePythonEnvDirectory(String pythonInstallation){
         String postfix = pythonInstallation.replaceAll("/", "-")
                 .replaceFirst("[a-zA-Z]:\\\\", "")
-                .replaceFirst("[a-zA-Z]:", "")
                 .replaceAll("\\\\", "-");
 
         if (!postfix.startsWith("-")) {
